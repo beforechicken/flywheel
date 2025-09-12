@@ -3,6 +3,7 @@ theme:
   name: material
 nav:
   - Home: index.md
+  - Setup: setup.md
   - Governance:
     - Board Charter: governance/board_charter.md
     - Conflicts Policy: governance/conflicts.md
