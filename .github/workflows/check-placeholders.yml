@@ -1,0 +1,15 @@
+name: Check Placeholders
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail if placeholders exist
+        run: |
+          if grep -R "<<PLACEHOLDER\|<<FUND_NAME\|<<ENTITY_NAME\|<<PORTCO_NAME" -n . ; then
+            echo "Fill in placeholders before merging."
+            exit 1
+          fi

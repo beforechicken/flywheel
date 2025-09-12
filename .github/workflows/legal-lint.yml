@@ -1,0 +1,19 @@
+name: Legal Lint
+on:
+  pull_request:
+    paths:
+      - 'LEGAL/**'
+      - 'GOVERNANCE/**'
+      - 'POLICIES/**'
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan for placeholders and banned phrases
+        run: |
+          BAD='TBD\|<<PLACEHOLDER\|Lorem ipsum'
+          if grep -R "$BAD" -n LEGAL GOVERNANCE POLICIES ; then
+            echo "Resolve placeholders and dummy text before merge."
+            exit 1
+          fi

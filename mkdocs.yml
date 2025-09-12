@@ -1,0 +1,29 @@
+site_name: <<FUND_NAME>> Handbook
+theme:
+  name: material
+nav:
+  - Home: index.md
+  - Governance:
+    - Board Charter: governance/board_charter.md
+    - Conflicts Policy: governance/conflicts.md
+    - Investment Policy: governance/investment_policy.md
+    - Winding-Up Policy: governance/winding_up.md
+    - Purpose Guardian: governance/purpose_guardian.md
+    - Reserved Matters: governance/reserved_matters.md
+    - Remuneration: governance/remuneration.md
+  - Legal:
+    - Overview: legal/index.md
+    - No-Offer Disclaimer: about/no-offer.md
+  - Policies:
+    - Overview: policies/index.md
+  - Investments:
+    - Process: investments/process.md
+    - Templates: investments/templates.md
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - attr_list
+  - def_list
+  - footnotes
+  - tables

@@ -1,0 +1,36 @@
+name: Build & Publish Handbook
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Install MkDocs
+        run: |
+          pip install mkdocs mkdocs-material
+      - name: Mirror POLICIES to docs/policies
+        run: |
+          rm -rf docs/policies || true
+          mkdir -p docs/policies
+          cp -r POLICIES/* docs/policies/ || true
+      - name: Redact PRIVATE tags in docs
+        run: |
+          python scripts/redact.py $(git ls-files 'docs/**/*.md') || true
+      - name: Build site
+        run: mkdocs build --strict
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site

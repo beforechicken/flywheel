@@ -1,0 +1,5 @@
+ID,Category,Description,Impact,Likelihood,Owner,Mitigation,Status
+R1,Legal,MIS/AFSL trigger if others contribute,High,Med,Advisor,Legal review before onboarding third parties,Open
+R2,Governance,Mission drift if board changes,High,Med,Chair,Reserved Matters + Purpose Guardian,Open
+R3,Privacy,Publishing personal data publicly,High,Low,Sec Lead,Public/INTERNAL split + redaction,Open
+R4,Tax,Franking/refund complexity for NFP,Med,Low,Accountant,Structure advice,Open
