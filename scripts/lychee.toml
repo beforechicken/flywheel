@@ -1,0 +1,12 @@
+# Lychee configuration for link checking
+exclude_path = ["INTERNAL/"]
+max_redirects = 10
+user_agent = "beforechicken-linkcheck/1.0"
+timeout = 20
+
+# Ignore local anchors that may render via MkDocs
+exclude = [
+  "^mailto:",
+  "^tel:",
+  "^#",
+]
