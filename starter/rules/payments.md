@@ -11,3 +11,7 @@ Checklist (every payment):
 - Docs? (invoice/contract/receipts)
 - Conflicts? (disclose/manage)
 - Authorisations? (two signatories)
+
+Investment gate:
+- If payment is an investment/venture deployment, confirm corpus ≥ AUD 2,000,000 (see `rules/investment_threshold.md`).
+- If below threshold, do not proceed unless supermajority Board approval explicitly waives the gate for this case.

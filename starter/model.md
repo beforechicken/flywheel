@@ -16,3 +16,9 @@ Invariants:
 - No money out to insiders
 - Conflicts managed and disclosed
 - Wind‑up transfers to like‑purposed entity
+
+See also:
+- Lifecycle and cadence: lifecycle.md
+- Ops roles and calendar: ops/roles.md, ops/calendar.md
+- Paperwork index and status: ops/paperwork.md, ops/status-verification.md
+- Investment gate: rules/investment_threshold.md; quick corpus check: scripts/corpus.py

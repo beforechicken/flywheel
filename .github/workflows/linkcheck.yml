@@ -1,8 +1,8 @@
-name: Nightly Link Check
+name: Weekly Link Check
 
 on:
   schedule:
-    - cron: '0 2 * * *'  # daily at 02:00 UTC
+    - cron: '0 2 * * 1'  # weekly on Monday 02:00 UTC
   workflow_dispatch:
 
 jobs:
