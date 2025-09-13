@@ -13,6 +13,7 @@ Public handbook (MkDocs) + internal-only area + policies-as-code + CI guardrails
 5. Use Issue templates for board agendas, IC memos, resolutions.
 6. Before onboarding **any outside capital**, read `COMPLIANCE/MIS_AFSL_Boundary_Note.md` and get advice.
 7. (Optional) Consider ACNC path later; see `COMPLIANCE/ACNC_Option_Note.md`.
+8. Follow `docs/setup.md` for a chronological setup covering ASIC, banking, Stripe and GitHub.
 
 ## Layout
 - `/docs` – public handbook (GitHub Pages)
